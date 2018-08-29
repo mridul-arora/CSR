@@ -111,3 +111,24 @@ var Grid = (function() {
 			easing : 'ease'
 		};
 })();
+
+var bgslider=[
+    {
+        pic: "img/bgslides/1.jpg",
+    }, 
+     {
+        pic: "img/bgslides/2.jpg",
+    }, 
+     {
+        pic: "img/bgslides/3.jpg",
+    }, 
+];
+
+function change_bg()
+{
+    var i = Math.floor((Math.random() * 4));
+    document.getElementById("slider").src =bgslider[i].pic;
+}
+setInterval(function(){
+    change_bg();
+}, 1500);

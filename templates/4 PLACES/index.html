@@ -15,7 +15,10 @@
     <link href="css/intro.css" rel="stylesheet" type="text/css">
     <link href="css/parallelism.css" rel="stylesheet" type="text/css">
     <link href="css/about_us.css" rel="stylesheet" type="text/css">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +32,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
-
+    <script src="js/custom.js"></script>
 </head>
 
 <body id="page-top">
@@ -44,9 +47,6 @@
         </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
-                    <!-- <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
                     </li>
@@ -55,6 +55,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#reviews">Reviews</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -67,7 +70,7 @@
     <!-- intro area -->
     <div class=" js csstransitions">
         <div id="intro">
-            <div class="mbBgndGallery">
+            <div class="mbBgndGallery" id="slider">
                 <img src="img/bgslides/3.jpg" w="2048" h="900" style="position: absolute; height: 100%; width: auto;  margin-top: 0px; left: 0px; opacity: 1;">
                 <div class="intro-text">
                     <div class="container">
@@ -83,59 +86,6 @@
             </div>
         </div>
     </div>
-    <!-- Header -->
-    <!--<header class="masthead">
-        <section id="banner">
-            <div class="inner">
-                 <div class="container">
-       <div class="intro-text">
-          <div class="intro-lead-in">Welcome To Our Studio!</div>
-          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
-        </div>
-      </div>
-            </div>
-        </section>
-       
-    </header>-->
-
-    <!-- Services -->
-    <!-- <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-        </div>
-      </div>
-    </section>-->
 
     <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
@@ -161,7 +111,104 @@
                         <p class="text-muted">Illustration</p>
                     </div>
                 </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Bhidholi School</h4>
+                        <p class="text-muted">Illustration</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Hour of Code</h4>
+                        <p class="text-muted">Illustration</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Teach Girls</h4>
+                        <p class="text-muted">Illustration</p>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <header class="section-header">
+                <h3>About Us</h3>
+                <p>We at UPES ACM and UPES ACM-W believe in giving away to the society just as much as we gain from it. For this very reason, we have an exclusive department of CSR (Corporate Social Responsibility) that helps us in contributing to the world around, in a more meaningful way. The CSR Department conducts sessions with different schools and organisations to help the children who are our future, to become friendly with Computing in this highly technically advanced world. Also, CSR sessions are conducted for the underprivileged people who deserve to walk at the same pace as all of the people around them in this world.</p>
+            </header>
+
+            <div class="row about-cols">
+
+                <div class="col-md-4 wow fadeInUp">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="img/about/about-mission.jpg" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                        </div>
+                        <h2 class="title"><a href="#">Our Mission</a></h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="img/about/about-plan.jpg" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                        </div>
+                        <h2 class="title"><a href="#">Our Plan</a></h2>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="img/about/about-vision.jpg" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                        </div>
+                        <h2 class="title"><a href="#">Our Vision</a></h2>
+                        <p>
+                            Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
@@ -256,164 +303,67 @@
         </div>
     </section>
 
-
-    <!-- About -->
-    <section id="about">
+    <!-- Comments/Reviews -->
+    <section id="reviews">
         <div class="container">
+            <header class="section-header">
+                <h3>From Us. For Us.</h3>
+            </header>
 
-        <header class="section-header">
-          <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </header>
+            <div class="owl-carousel testimonials-carousel">
 
-        <div class="row about-cols">
-
-          <div class="col-md-4 wow fadeInUp">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-mission.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Our Mission</a></h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-plan.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-list-outline"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Our Plan</a></h2>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-vision.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Our Vision</a></h2>
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    <!--    <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <div class="testimonial-item">
+                    <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
+                    <h3>Saul Goodman</h3>
+                    <h4>Ceo &amp; Founder</h4>
+                    <p>
+                        <img src="img/quote-sign-left.png" class="quote-sign-left" alt=""> Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                        <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                    </p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
-    </section>
 
-    <!-- Clients -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-            </a>
+                <div class="testimonial-item">
+                    <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
+                    <h3>Sara Wilsson</h3>
+                    <h4>Designer</h4>
+                    <p>
+                        <img src="img/quote-sign-left.png" class="quote-sign-left" alt=""> Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                        <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                    </p>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-            </a>
+
+                <div class="testimonial-item">
+                    <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
+                    <h3>Jena Karlis</h3>
+                    <h4>Store Owner</h4>
+                    <p>
+                        <img src="img/quote-sign-left.png" class="quote-sign-left" alt=""> Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                        <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                    </p>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-            </a>
+
+                <div class="testimonial-item">
+                    <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
+                    <h3>Matt Brandon</h3>
+                    <h4>Freelancer</h4>
+                    <p>
+                        <img src="img/quote-sign-left.png" class="quote-sign-left" alt=""> Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                        <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                    </p>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-            </a>
+
+                <div class="testimonial-item">
+                    <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
+                    <h3>John Larson</h3>
+                    <h4>Entrepreneur</h4>
+                    <p>
+                        <img src="img/quote-sign-left.png" class="quote-sign-left" alt=""> Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                        <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                    </p>
                 </div>
+
             </div>
+
         </div>
     </section>
 
@@ -520,90 +470,91 @@
                                 <!-- Project Details Go Here -->
                                 <h2 class="text-uppercase">Learning Tree School</h2>
                                 <p class="item-intro text-muted">We begun from the Learning Tree School where we helped the students to prepare for their annual function, we also helped them in making props, into the bargain they perform a dance performance along with the kids.</p>
-    
-                    <!-- Wrapper -->
-                    <div id="wrapper">
 
-                        <!-- Main -->
-                        <section id="main">
+                                <!-- Wrapper -->
+                                <div id="wrapper">
+                                    <div class="scrollZone left" style="left: -1em;"></div>
+                                    <!-- Main -->
+                                    <section id="main">
 
-                            <!-- Items -->
-                            <div class="items">
+                                        <!-- Items -->
+                                        <div class="items">
 
-                                <div class="item intro span-2">
-                                    <h1>Parallelism</h1>
-                                    <p>A responsive portfolio site<br /> template by HTML5 UP</p>
+                                            <div class="item intro span-2">
+                                                <h1>Parallelism</h1>
+                                                <p>A responsive portfolio site<br /> template by HTML5 UP</p>
+                                            </div>
+
+                                            <article class="item thumb span-1">
+                                                <h2>You really got me</h2>
+                                                <a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>Ad Infinitum</h2>
+                                                <a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>Different.</h2>
+                                                <a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>Elysium</h2>
+                                                <a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-3">
+                                                <h2>Kingdom of the Wind</h2>
+                                                <a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>The Pursuit</h2>
+                                                <a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>Boundless</h2>
+                                                <a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>The Spectators</h2>
+                                                <a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a>
+                                            </article>
+
+                                        </div>
+
+                                        <!-- Items -->
+                                        <div class="items">
+
+                                            <article class="item thumb span-3">
+                                                <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>The Pursuit</h2><a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Boundless</h2><a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>The Spectators</h2><a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>You really got me</h2><a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Ad Infinitum</h2><a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>Different.</h2><a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>Elysium</h2><a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a></article>
+
+                                        </div>
+
+                                    </section>
+                                    <div class="scrollZone right" style="right: -1em;"></div>
                                 </div>
 
-                                <article class="item thumb span-1">
-                                    <h2>You really got me</h2>
-                                    <a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a>
-                                </article>
-
-                                <article class="item thumb span-2">
-                                    <h2>Ad Infinitum</h2>
-                                    <a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a>
-                                </article>
-
-                                <article class="item thumb span-1">
-                                    <h2>Different.</h2>
-                                    <a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a>
-                                </article>
-
-                                <article class="item thumb span-1">
-                                    <h2>Elysium</h2>
-                                    <a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a>
-                                </article>
-
-                                <article class="item thumb span-3">
-                                    <h2>Kingdom of the Wind</h2>
-                                    <a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a>
-                                </article>
-
-                                <article class="item thumb span-1">
-                                    <h2>The Pursuit</h2>
-                                    <a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a>
-                                </article>
-
-                                <article class="item thumb span-2">
-                                    <h2>Boundless</h2>
-                                    <a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a>
-                                </article>
-
-                                <article class="item thumb span-2">
-                                    <h2>The Spectators</h2>
-                                    <a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a>
-                                </article>
-
-                            </div>
-
-                            <!-- Items -->
-                            <div class="items">
-
-                                <article class="item thumb span-3">
-                                    <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
-                                <article class="item thumb span-1">
-                                    <h2>The Pursuit</h2><a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a></article>
-                                <article class="item thumb span-2">
-                                    <h2>Boundless</h2><a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a></article>
-                                <article class="item thumb span-2">
-                                    <h2>The Spectators</h2><a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a></article>
-                                <article class="item thumb span-1">
-                                    <h2>You really got me</h2><a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a></article>
-                                <article class="item thumb span-2">
-                                    <h2>Ad Infinitum</h2><a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a></article>
-                                <article class="item thumb span-1">
-                                    <h2>Different.</h2><a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a></article>
-                                <article class="item thumb span-2">
-                                    <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
-                                <article class="item thumb span-1">
-                                    <h2>Elysium</h2><a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a></article>
-
-                            </div>
-
-                        </section>
-                    </div>
-                    
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                 <ul class="list-inline">
                                     <li>Date: January 2017</li>
@@ -622,7 +573,7 @@
     </div>
 
     <!-- Modal 2 -->
-    <!--<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -633,16 +584,100 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">-->
-    <!-- Project Details Go Here-->
-    <!--<h2 class="text-uppercase">Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Bhidholi School</h2>
+                                <p class="item-intro text-muted">On 18th November we initiated brimming activity in Bidholi School. To increase self-confidence and speaking skills the team first asked the kids to introduce themselves. In continuation we plead them! about various festivals and how do we celebrate them, and told them about the importance and the reason that why do we celebrate Dussehra and Diwali. At last we gave them sheets and helped them to make cards using thumb painting and vegetable painting. This initiative helped them in the holistic development with innovative teaching aids to address their educational habits.</p>
+
+                                <!-- Wrapper -->
+                                <div id="wrapper">
+                                    <div class="scrollZone left" style="left: -1em;"></div>
+                                    <!-- Main -->
+                                    <section id="main">
+
+                                        <!-- Items -->
+                                        <div class="items">
+
+                                            <div class="item intro span-2">
+                                                <h1>Parallelism</h1>
+                                                <p>A responsive portfolio site<br /> template by HTML5 UP</p>
+                                            </div>
+
+                                            <article class="item thumb span-1">
+                                                <h2>You really got me</h2>
+                                                <a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>Ad Infinitum</h2>
+                                                <a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>Different.</h2>
+                                                <a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>Elysium</h2>
+                                                <a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-3">
+                                                <h2>Kingdom of the Wind</h2>
+                                                <a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>The Pursuit</h2>
+                                                <a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>Boundless</h2>
+                                                <a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>The Spectators</h2>
+                                                <a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a>
+                                            </article>
+
+                                        </div>
+
+                                        <!-- Items -->
+                                        <div class="items">
+
+                                            <article class="item thumb span-3">
+                                                <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>The Pursuit</h2><a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Boundless</h2><a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>The Spectators</h2><a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>You really got me</h2><a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Ad Infinitum</h2><a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>Different.</h2><a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>Elysium</h2><a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a></article>
+
+                                        </div>
+
+                                    </section>
+                                    <div class="scrollZone right" style="right: -1em;"></div>
+                                </div>
+
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                 <ul class="list-inline">
                                     <li>Date: January 2017</li>
-                                    <li>Client: Explore</li>
-                                    <li>Category: Graphic Design</li>
+                                    <li>Client: Threads</li>
+                                    <li>Category: Illustration</li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
@@ -653,10 +688,10 @@
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>
 
     <!-- Modal 3 -->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -667,31 +702,115 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">-->
-    <!-- Project Details Go Here -->
-    <!-- <h2 class="text-uppercase">Project Name</h2>
-    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-    <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-    <ul class="list-inline">
-        <li>Date: January 2017</li>
-        <li>Client: Finish</li>
-        <li>Category: Identity</li>
-    </ul>
-    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Hour of Code</h2>
+                                <p class="item-intro text-muted">Hour of Code was held on 9th December at Army Public School, Birpur, where we interacted with the students of 6th and 7th standard, the group of students who were eager to learn new things and could really understand the importance of computers and computing, starting from the 'Why to the "How They were acknowledged with introduction to Computers, their evolution, the current scenario, as well as the future course the domain is concerned. Interactive sessions based on basic coding on C/C++, and inculcate the idea of logical thinking and problem resolution through a plethora of puzzles and riddles were delineated. Later "Practical implementation of Java' was stated to 11th standard students. At last but not the least an entertainment session, including musical symphonies was held for amusement and enjoyment
+                                </p>
+
+                                <!-- Wrapper -->
+                                <div id="wrapper">
+                                    <div class="scrollZone left" style="left: -1em;"></div>
+                                    <!-- Main -->
+                                    <section id="main">
+
+                                        <!-- Items -->
+                                        <div class="items">
+
+                                            <div class="item intro span-2">
+                                                <h1>Parallelism</h1>
+                                                <p>A responsive portfolio site<br /> template by HTML5 UP</p>
+                                            </div>
+
+                                            <article class="item thumb span-1">
+                                                <h2>You really got me</h2>
+                                                <a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>Ad Infinitum</h2>
+                                                <a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>Different.</h2>
+                                                <a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>Elysium</h2>
+                                                <a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-3">
+                                                <h2>Kingdom of the Wind</h2>
+                                                <a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>The Pursuit</h2>
+                                                <a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>Boundless</h2>
+                                                <a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>The Spectators</h2>
+                                                <a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a>
+                                            </article>
+
+                                        </div>
+
+                                        <!-- Items -->
+                                        <div class="items">
+
+                                            <article class="item thumb span-3">
+                                                <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>The Pursuit</h2><a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Boundless</h2><a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>The Spectators</h2><a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>You really got me</h2><a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Ad Infinitum</h2><a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>Different.</h2><a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>Elysium</h2><a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a></article>
+
+                                        </div>
+
+                                    </section>
+                                    <div class="scrollZone right" style="right: -1em;"></div>
+                                </div>
+
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Threads</li>
+                                    <li>Category: Illustration</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
--->
 
     <!-- Modal 4 -->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -702,99 +821,113 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">-->
-    <!-- Project Details Go Here -->
-    <!-- <h2 class="text-uppercase">Project Name</h2>
-    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-    <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-    <ul class="list-inline">
-        <li>Date: January 2017</li>
-        <li>Client: Lines</li>
-        <li>Category: Branding</li>
-    </ul>
-    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Teach Girls</h2>
+                                <p class="item-intro text-muted">NO ONE IS CHERISHED MORE IN THE WORLD THAN SOMEONE WHO LIGHTENS THE BURDEN OF ANOTHER UPES ACM and UPES ACM-W student chapter believe to work for a cause and not for applause. The CSR heads with their team, full of energy and enthusiasm brought this into action by organizing a CSR activity. After the celebration of Women's Day week, our CSR heads decided to help the girls of TEACH GIRLS foundation, to grow with knowledge in innovatory and artistic ways. From presenting them a self-designed souvenir of white flowers inked with food colour to demonstrating the eruption of volcano, they gained awareness on optics, by learning and the formation of rainbows and creating mini microscopes with the help of CD's and paper cups respectively and the team ended with explaining significant information on pressure with the use of sealed bags full of water. The day also included little angels dancing with our team and a girl showcasing her talent of yoga. CSR team of the chapter will visit them again and inspire these children to focus on the greater good.</p>
+
+                                <!-- Wrapper -->
+                                <div id="wrapper">
+                                    <div class="scrollZone left" style="left: -1em;"></div>
+                                    <!-- Main -->
+                                    <section id="main">
+
+                                        <!-- Items -->
+                                        <div class="items">
+
+                                            <div class="item intro span-2">
+                                                <h1>Parallelism</h1>
+                                                <p>A responsive portfolio site<br /> template by HTML5 UP</p>
+                                            </div>
+
+                                            <article class="item thumb span-1">
+                                                <h2>You really got me</h2>
+                                                <a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>Ad Infinitum</h2>
+                                                <a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>Different.</h2>
+                                                <a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>Elysium</h2>
+                                                <a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-3">
+                                                <h2>Kingdom of the Wind</h2>
+                                                <a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-1">
+                                                <h2>The Pursuit</h2>
+                                                <a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>Boundless</h2>
+                                                <a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a>
+                                            </article>
+
+                                            <article class="item thumb span-2">
+                                                <h2>The Spectators</h2>
+                                                <a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a>
+                                            </article>
+
+                                        </div>
+
+                                        <!-- Items -->
+                                        <div class="items">
+
+                                            <article class="item thumb span-3">
+                                                <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>The Pursuit</h2><a href="images/fulls/06.jpg" class="image"><img src="img/places/06.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Boundless</h2><a href="images/fulls/07.jpg" class="image"><img src="img/places/07.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>The Spectators</h2><a href="images/fulls/08.jpg" class="image"><img src="img/places/08.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>You really got me</h2><a href="images/fulls/01.jpg" class="image"><img src="img/places/01.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Ad Infinitum</h2><a href="images/fulls/02.jpg" class="image"><img src="img/places/02.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>Different.</h2><a href="images/fulls/03.jpg" class="image"><img src="img/places/03.jpg" alt=""></a></article>
+                                            <article class="item thumb span-2">
+                                                <h2>Kingdom of the Wind</h2><a href="images/fulls/05.jpg" class="image"><img src="img/places/05.jpg" alt=""></a></article>
+                                            <article class="item thumb span-1">
+                                                <h2>Elysium</h2><a href="images/fulls/04.jpg" class="image"><img src="img/places/04.jpg" alt=""></a></article>
+
+                                        </div>
+
+                                    </section>
+                                    <div class="scrollZone right" style="right: -1em;"></div>
+                                </div>
+
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Threads</li>
+                                    <li>Category: Illustration</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close Project</button>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
--->
-    
-    <!-- Modal 5 -->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">-->
-    <!-- Project Details Go Here -->
-    <!--<h2 class="text-uppercase">Project Name</h2>
-    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-    <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-    <ul class="list-inline">
-        <li>Date: January 2017</li>
-        <li>Client: Southwest</li>
-        <li>Category: Website Design</li>
-    </ul>
-    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
--->
-    
-    <!-- Modal 6 -->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">-->
-    <!-- Project Details Go Here -->
-    <!-- <h2 class="text-uppercase">Project Name</h2>
-    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-    <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-    <ul class="list-inline">
-        <li>Date: January 2017</li>
-        <li>Client: Window</li>
-        <li>Category: Photography</li>
-    </ul>
-    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
--->
-    
+
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -819,14 +952,19 @@
     <script src="js/main.js"></script>
     <script src="js/jquery.poptrox.min.js"></script>
     <script src="js/util.js"></script>
-    <!--<script src="js/main1.js"></script>-->
+    <script src="js/parallelism.js"></script>
 
     <!-- intro  -->
     <script src="js/jquery.simple-text-rotator.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/mb.bgndGallery.effects.js"></script>
     <script src="js/mb.bgndGallery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <!--intro-end-->
+
+    <!--Aboutus-->
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/wow/wow.js"></script>
 
 </body>
 
