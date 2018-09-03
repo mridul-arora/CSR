@@ -14,10 +14,12 @@ p {
 
 a {
   color: #fed136;
+    text-decoration: none;
 }
 
 a:hover {
   color: #fec503;
+    text-decoration: none;
 }
 
 .text-primary {
@@ -169,7 +171,7 @@ img::-moz-selection {
   }
 }
 
-header.masthead {
+/*header.masthead {
   text-align: center;
   color: white;
   background-image: url("../img/header-bg.jpg");
@@ -223,7 +225,7 @@ header.masthead .intro-text .intro-heading {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
-
+*/
 .service-heading {
   margin: 15px 0;
   text-transform: none;
