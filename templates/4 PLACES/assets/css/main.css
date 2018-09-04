@@ -21,7 +21,6 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-size: 36px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
 }
@@ -378,8 +377,6 @@ a.back-to-top:hover, a.back-to-top:focus {
   color: #333;
   font-weight: 700;
   padding: 0 17px;
-  margin-top: 15px;
-  margin-bottom: 15px;
   line-height: 40px;
   text-transform: uppercase;
   cursor: pointer;
@@ -512,10 +509,6 @@ a.back-to-top:hover, a.back-to-top:focus {
   }
 }
 
-.navbar-toggler {
-  display: none;
-}
-
 .mobile-menu {
   display: none;
 }
@@ -529,7 +522,6 @@ a.back-to-top:hover, a.back-to-top:focus {
     width: 100%;
   }
   .navbar-brand {
-    position: absolute;
     padding: 15px 15px;
     top: 0;
   }

@@ -63,7 +63,7 @@
 
   // Carousel
   $('.service .carousel').carousel({
-    interval: 4000
+    interval: 4000 
   })
 
   //works
