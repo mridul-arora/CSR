@@ -106,12 +106,12 @@ module.exports = function(grunt) {
         }
 
     });
- 
+
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-bowercopy');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
- 
+
     grunt.registerTask('default', ['uglify','compass','bowercopy','connect:livereload','watch']);
 };
